@@ -1,0 +1,50 @@
+---
+layout: layout.njk
+title:  Our work is our <em>signature</em>
+description: Premium exterior services for your home or business
+button_title: "Call (403) 470-8666"
+button_link: "tel:4034708666"
+image_url : "/assets/images/exteriors2.jpg" 
+landing_layout: grid
+---
+
+<div class="grey-section" >
+<div class="govuk-width-container">
+  <h2 class="govuk-heading-l">Our Services</h2>
+  <p class="govuk-body-lead" style="max-width:60rem" >From new installations to emergency repairs, we offer comprehensive roofing services to keep your home protected and beautiful.</p>
+  <div class="dfe-grid-container">
+  
+    {% for posts in collections.posts %}
+      
+      <div class="dfe-card">
+        {% if posts.data.icon %}
+        <div>
+        <object type="image/svg+xml" data={{posts.data.icon}} class="icons">Your browser does not support SVG</object>
+
+          
+          </div>
+        {% endif %}
+        <div class="dfe-card-container">
+          <h3 class="govuk-heading-m">
+            <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="{{ posts.url }}">{{ posts.data.title }}</a>
+          </h3>
+          <p class="govuk-body">{{posts.data.description}}
+          </div>
+        </div>
+
+      {% endfor %}
+    </div>
+    </div>
+</div>
+<section class="section">
+  <div class="govuk-width-container">
+     <h2 class="govuk-heading-l ">Check out our work on Youtube</h2>
+     <p class="govuk-body-lead">See us in action!</p>
+     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;">
+        <iframe width="560" height="315" style="width:100%;aspect-ratio:16/9;" src="https://www.youtube.com/embed/dASDOq8SkjA?si=ZLKr-ENsCphXmo8D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" style="width:100%;aspect-ratio:16/9;" src="https://www.youtube.com/embed/dASDOq8SkjA?si=ZLKr-ENsCphXmo8D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+     </div>
+  
+</section>
+
+  

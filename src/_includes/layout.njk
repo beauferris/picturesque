@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"/>
+
+    {% set metaDescription = seo.description or description or site.description %}
+    {% set siteName = site.name %}
+    {% set robots = robots or "index,follow" %}
+
+    <title>{{ siteName + " | " + title }}</title>
+    <meta name="description" content="{{ metaDescription}}">
+    <meta name="robots" content="{{ robots }}">
+
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:type" content="{{ seo.type or 'website' }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/styles.css"/>
+    <script src="/scripts/main.js"></script>
+    <link rel="preload" href="/assets/images/logo.png" as="image" fetchpriority="high">
+  </head>
+
+  <body class="govuk-template__body">
+
+    {% include "partials/header.njk" %}
+
+    {% if landing_layout %}
+      {% include "partials/landing-" + landing_layout + ".njk" %}
+    {% else %}
+      {% include "partials/landing-default.njk" %}
+    {% endif %}
+
+    <main class="govuk-main-wrapper"  id="main-content">
+      <div>
+      {{ content | safe }}
+      </div>
+    </main>
+    
+    {% include "partials/contact.njk" %}
+
+    
+  </body>
+</html>

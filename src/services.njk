@@ -1,0 +1,24 @@
+---
+layout: layout.njk
+title: Our Services
+description: All services we provide
+permalink: "/services/"
+button_title: "Call (403) 606-5084"
+button_link: "tel:4036065084"
+---
+
+<div class="govuk-width-container dfe-grid-container">
+  {% for posts in collections.posts %}
+
+    <div class="dfe-card">
+      {# <img src={{posts.data.image_url}} alt={title} /> #}
+      <div class="dfe-card-container">
+        <h3 class="govuk-heading-m">
+          <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="{{ posts.url }}">{{ posts.data.title }}</a>
+        </h3>
+        <p class="govuk-body">{{posts.data.description}}</p>
+      </div>
+    </div>
+
+  {% endfor %}
+</div>

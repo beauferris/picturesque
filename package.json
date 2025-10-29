@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  },
+  "dependencies": {
+    "@11ty/eleventy-plugin-rss": "^2.0.4",
+    "@quasibit/eleventy-plugin-sitemap": "^2.2.0"
+  }
+}
