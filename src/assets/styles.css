@@ -4153,7 +4153,7 @@ hr{
 @media (min-width: 20em) {
   .govuk-header__menu-button {
     position: absolute;
-    top: 12px;
+    top: 16px;
     right: 0;
     margin: 0;
   }
@@ -4161,7 +4161,7 @@ hr{
 
 @media (min-width: 40.0625em) {
   .govuk-header__menu-button {
-    top: 12px;
+    top: 16px;
   }
 }
 
@@ -4206,7 +4206,7 @@ hr{
 
 @media (min-width: 48.0625em) {
   .govuk-header__navigation {
-    margin-bottom: 10px;
+  
   }
 
   .govuk-template--rebranded .govuk-header__navigation {
@@ -7028,13 +7028,13 @@ hr{
 @media (min-width: 48.0625em) {
   .govuk-header__navigation {
     margin-bottom: 0px;
-    padding-bottom: 10px;
+    
   }
 }
 
 .govuk-header__navigation {
   margin-bottom: 0px;
-  padding-bottom: 10px;
+  
 }
 
 .govuk-footer {
