@@ -66,10 +66,18 @@ image_url : "/assets/images/exteriors2.jpg"
   <hr>
      <h2 class="govuk-heading-l ">Check out our work on Youtube</h2>
      <p class="govuk-body-lead">See us in action!</p>
-     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;">
+     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;margin-bottom:30px">
         <iframe width="560" height="315" style="width:100%;aspect-ratio:16/9;" src="https://www.youtube.com/embed/dASDOq8SkjA?si=ZLKr-ENsCphXmo8D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <iframe width="560" height="315" style="width:100%;aspect-ratio:16/9;" src="https://www.youtube.com/embed/dASDOq8SkjA?si=ZLKr-ENsCphXmo8D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
      </div>
+     <hr>
+       <h2 class="govuk-heading-l ">Our work</h2>
+      {% set galleryId = "project-gallery" %}
+  {% set images = [
+    { src: "/assets/images/roof-replacement.png", alt: "Freshly installed roof", caption: "Full roof replacement" },
+    { src: "/assets/images/roof-repairs.png", alt: "Repair crew at work", caption: "Repair in progress" }
+  ] %}
+  {% include "partials/photo-gallery.njk" %}
 </section>
 
   
