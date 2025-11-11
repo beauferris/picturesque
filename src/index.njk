@@ -1,6 +1,7 @@
 ---
 layout: layout.njk
 title:  Our work is our <em>signature</em>
+metaTitle: "Our work is our signature"
 description: Premium exterior services for your home or business
 button_title: "Call (403) 470-8666"
 button_link: "tel:4034708666"
@@ -14,21 +15,21 @@ image_url : "/assets/images/exteriors2.jpg"
   <p class="govuk-body-lead" style="max-width:60rem" >From new installations to emergency repairs, we offer comprehensive roofing services to keep your home protected and beautiful.</p>
   <div class="dfe-grid-container">
   
-    {% for posts in collections.posts %}
+    {% for service in collections.servicesOrdered %}
       
       <div class="dfe-card">
-        {% if posts.data.icon %}
+        {% if service.data.icon %}
         <div>
-        <object type="image/svg+xml" data={{posts.data.icon}} class="icons">Your browser does not support SVG</object>
+        <object type="image/svg+xml" data={{service.data.icon}} class="icons">Your browser does not support SVG</object>
 
           
           </div>
         {% endif %}
         <div class="dfe-card-container">
           <h3 class="govuk-heading-m">
-            <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="{{ posts.url }}">{{ posts.data.title }}</a>
+            <a class="govuk-link govuk-link--no-visited-state dfe-card-link--header" href="{{ service.url }}">{{ service.data.title }}</a>
           </h3>
-          <p class="govuk-body">{{posts.data.description}}
+          <p class="govuk-body">{{service.data.description}}
           </div>
         </div>
 
@@ -74,8 +75,11 @@ image_url : "/assets/images/exteriors2.jpg"
        <h2 class="govuk-heading-l ">Our work</h2>
       {% set galleryId = "project-gallery" %}
   {% set images = [
-    { src: "/assets/images/roof-replacement.png", alt: "Freshly installed roof", caption: "Full roof replacement" },
-    { src: "/assets/images/roof-repairs.png", alt: "Repair crew at work", caption: "Repair in progress" }
+    { src: "/assets/images/full-roof-replacement.jpg", alt: "Freshly installed roof", caption: "Full roof replacement" },
+    { src: "/assets/images/residential-flat-roof-replacement.jpg", alt: "Residential flat roof", caption: "Residential Flat Roof Replacement" },
+    { src: "/assets/images/commercial-repair.jpg", alt: "Commerical Service Leak Repairs and Maintenance", caption: "Commerical Service Leak Repairs and Maintenance"},
+    { src: "/assets/images/special-projects-roof-cleaning.jpg", alt: "Roof Cleaning and Pressure Washing", caption: "Roof Cleaning and Pressure Washing"},
+    { src: "/assets/images/commercial-replacement.png", alt: "Roof Cleaning and Pressure Washing", caption: "Commercial Roof Replacement"}
   ] %}
   {% include "partials/photo-gallery.njk" %}
 </section>
